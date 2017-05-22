@@ -1,0 +1,35 @@
+using namespace std;
+int isolater(int N,int i){
+    int size=log10(N) + 1;
+   
+        N=N/pow(10,size-1-i);
+        N=N%10;
+    
+
+return N;}
+
+
+bool palli(int A ){
+    
+    if(A>=0){
+     int size =((log10(A))+1);
+    
+         for(int i=0;i<=size/2;i++){
+             
+         if(isolater(A,i)==isolater(A,size-1-i)){}
+         
+         else return 0;
+     }
+     return 1; }
+     
+     return 0;
+     
+}
+
+
+bool Solution::isPalindrome(int A) {
+    
+    
+    return palli(A);
+ 
+}
